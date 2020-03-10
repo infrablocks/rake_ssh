@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rake_github/version'
+require 'rake_ssh/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rake_github'
-  spec.version       = RakeGithub::VERSION
+  spec.name          = 'rake_ssh'
+  spec.version       = RakeSSH::VERSION
   spec.authors       = ['Toby Clemson']
   spec.email         = ['tobyclemson@gmail.com']
 
-  spec.summary       = 'Rake tasks for managing Github repositories.'
-  spec.description   = 'Allows managing repository deploy keys.'
-  spec.homepage      = "https://github.com/infrablocks/rake_github"
+  spec.summary       = 'Rake tasks for managing SSH keys.'
+  spec.description   = 'Allows generation of SSH keys.'
+  spec.homepage      = "https://github.com/infrablocks/rake_ssh"
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -25,7 +25,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'rake_factory', '~> 0.23'
   spec.add_dependency 'sshkey', '~> 2.0'
-  spec.add_dependency 'octokit', '~> 4.16'
   spec.add_dependency 'colored2', '~> 3.1'
 
   spec.add_development_dependency 'bundler', '~> 2.0'

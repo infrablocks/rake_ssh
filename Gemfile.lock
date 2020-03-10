@@ -1,9 +1,8 @@
 PATH
   remote: .
   specs:
-    rake_github (0.2.0.pre.6)
+    rake_ssh (0.1.0.pre.1)
       colored2 (~> 3.1)
-      octokit (~> 4.16)
       rake_factory (~> 0.23)
       sshkey (~> 2.0)
 
@@ -43,6 +42,11 @@ GEM
     rake_factory (0.25.0)
       activesupport (>= 4)
       rake (~> 13.0)
+    rake_github (0.2.0.pre.6)
+      colored2 (~> 3.1)
+      octokit (~> 4.16)
+      rake_factory (~> 0.23)
+      sshkey (~> 2.0)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -78,7 +82,8 @@ DEPENDENCIES
   memfs (~> 1.0)
   rake (~> 13.0)
   rake_circle_ci (~> 0.3)
-  rake_github!
+  rake_github (= 0.2.0.pre.6)
+  rake_ssh!
   rspec (~> 3.9)
   simplecov (~> 0.16)
 
