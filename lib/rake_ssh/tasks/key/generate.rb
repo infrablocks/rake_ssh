@@ -24,7 +24,7 @@ module RakeSSH
               bits: t.bits,
               comment: t.comment,
               passphrase: t.passphrase)
-          silence_stream(STDOUT) do
+          verbose(false) do
             mkdir_p(t.path)
           end
           File.open("#{t.path}/#{t.name_prefix}.private", 'w') do |f|
