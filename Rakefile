@@ -1,3 +1,4 @@
+require 'yaml'
 require 'rake_circle_ci'
 require 'rake_github'
 require "rspec/core/rake_task"
