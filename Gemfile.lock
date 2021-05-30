@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rake_ssh (0.6.0)
+    rake_ssh (0.7.0.pre.1)
       colored2 (~> 3.1)
       rake_factory (~> 0.23)
       sshkey (~> 2.0)
