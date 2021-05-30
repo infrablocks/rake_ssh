@@ -6,8 +6,8 @@ require 'rake_ssh/version'
 Gem::Specification.new do |spec|
   spec.name = 'rake_ssh'
   spec.version = RakeSSH::VERSION
-  spec.authors = ['Toby Clemson']
-  spec.email = ['tobyclemson@gmail.com']
+  spec.authors = ['InfraBlocks Maintainers']
+  spec.email = ['maintainers@infrablocks.io']
 
   spec.summary = 'Rake tasks for managing SSH keys.'
   spec.description = 'Allows generation of SSH keys.'
