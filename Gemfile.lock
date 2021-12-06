@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rake_ssh (0.7.0.pre.2)
+    rake_ssh (0.7.0.pre.3)
       colored2 (~> 3.1)
       rake_factory (~> 0.23)
       sshkey (~> 2.0)
@@ -114,4 +114,4 @@ DEPENDENCIES
   simplecov (~> 0.16)
 
 BUNDLED WITH
-   2.2.18
+   2.2.32
