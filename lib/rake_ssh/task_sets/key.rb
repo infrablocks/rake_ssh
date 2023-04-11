@@ -16,6 +16,8 @@ module RakeSSH
       parameter :comment
       parameter :passphrase
 
+      parameter :argument_names
+
       parameter :generate_task_name, default: :generate
 
       task Tasks::Key::Generate,

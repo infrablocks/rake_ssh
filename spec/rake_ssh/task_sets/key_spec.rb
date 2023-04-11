@@ -141,5 +141,15 @@ describe RakeSSH::TaskSets::Key do
       expect(Rake::Task.task_defined?('regenerate'))
         .to(be(true))
     end
+
+    it 'uses the provided argument names when supplied' do
+      argument_names = %i[deployment_identifier region]
+
+      define_tasks(argument_names: argument_names)
+
+      rake_task = Rake::Task['generate']
+
+      expect(rake_task.arg_names).to(eq(argument_names))
+    end
   end
 end
