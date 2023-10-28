@@ -131,8 +131,8 @@ RakeCircleCI.define_project_tasks(
   t.api_token = circle_ci_config['circle_ci_api_token']
   t.environment_variables = {
     ENCRYPTION_PASSPHRASE:
-        File.read('config/secrets/ci/encryption.passphrase')
-            .chomp
+      File.read('config/secrets/ci/encryption.passphrase')
+          .chomp
   }
   t.checkout_keys = []
   t.ssh_keys = [
@@ -184,10 +184,8 @@ task :release do
 end
 
 def bump_version_for(version_type)
-  sh 'git diff ' \
-     '&& git status ' \
-     "&& gem bump --version #{version_type} " \
-     '&& bundle install ' \
-     '&& export LAST_MESSAGE="$(git log -1 --pretty=%B)" ' \
-     '&& git commit -a --amend -m "${LAST_MESSAGE} [ci skip]"'
+  sh "gem bump --version #{version_type} " \
+       '&& bundle install ' \
+       '&& export LAST_MESSAGE="$(git log -1 --pretty=%B)" ' \
+       '&& git commit -a --amend -m "${LAST_MESSAGE} [ci skip]"'
 end
