@@ -184,10 +184,10 @@ task :release do
 end
 
 def bump_version_for(version_type)
-  sh "gem bump --version #{version_type} " \
-     '&& bundle install ' \
-     '&& git diff ' \
+  sh 'git diff ' \
      '&& git status ' \
+     "&& gem bump --version #{version_type} " \
+     '&& bundle install ' \
      '&& export LAST_MESSAGE="$(git log -1 --pretty=%B)" ' \
      '&& git commit -a --amend -m "${LAST_MESSAGE} [ci skip]"'
 end
