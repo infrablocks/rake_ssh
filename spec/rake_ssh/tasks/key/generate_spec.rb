@@ -96,12 +96,12 @@ describe RakeSSH::Tasks::Key::Generate do
     passphrase = 'passphrase'
 
     define_task(
-      path: path,
-      name_prefix: name_prefix,
-      type: type,
-      bits: bits,
-      comment: comment,
-      passphrase: passphrase
+      path:,
+      name_prefix:,
+      type:,
+      bits:,
+      comment:,
+      passphrase:
     )
 
     Rake::Task['key:generate'].invoke
@@ -110,8 +110,8 @@ describe RakeSSH::Tasks::Key::Generate do
     generated_public_key = File.read('/some/local/path/key.public')
 
     ssh_key = SSHKey.new(generated_private_key,
-                         passphrase: passphrase,
-                         comment: comment)
+                         passphrase:,
+                         comment:)
 
     expect(ssh_key.bits).to(eq(1024))
     expect(ssh_key.type).to(eq('dsa'))

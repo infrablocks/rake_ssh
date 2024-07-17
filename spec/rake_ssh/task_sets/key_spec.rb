@@ -30,7 +30,7 @@ describe RakeSSH::TaskSets::Key do
     it 'configures with the provided path' do
       path = '/key/goes/here'
 
-      define_tasks(path: path)
+      define_tasks(path:)
 
       rake_task = Rake::Task['generate']
 
@@ -49,7 +49,7 @@ describe RakeSSH::TaskSets::Key do
       name_prefix = 'key'
 
       define_tasks(
-        name_prefix: name_prefix
+        name_prefix:
       )
 
       rake_task = Rake::Task['generate']
@@ -68,7 +68,7 @@ describe RakeSSH::TaskSets::Key do
     it 'uses the provided type when specified' do
       type = 'DSA'
 
-      define_tasks(type: type)
+      define_tasks(type:)
 
       rake_task = Rake::Task['generate']
 
@@ -86,7 +86,7 @@ describe RakeSSH::TaskSets::Key do
     it 'uses the provided number of bits when specified' do
       bits = 2048
 
-      define_tasks(bits: bits)
+      define_tasks(bits:)
 
       rake_task = Rake::Task['generate']
 
@@ -104,7 +104,7 @@ describe RakeSSH::TaskSets::Key do
     it 'uses the provided comment when specified' do
       comment = 'someone@example.com'
 
-      define_tasks(comment: comment)
+      define_tasks(comment:)
 
       rake_task = Rake::Task['generate']
 
@@ -122,7 +122,7 @@ describe RakeSSH::TaskSets::Key do
     it 'uses the provided passphrase when specified' do
       passphrase = 'some-password'
 
-      define_tasks(passphrase: passphrase)
+      define_tasks(passphrase:)
 
       rake_task = Rake::Task['generate']
 
@@ -145,7 +145,7 @@ describe RakeSSH::TaskSets::Key do
     it 'uses the provided argument names when supplied' do
       argument_names = %i[deployment_identifier region]
 
-      define_tasks(argument_names: argument_names)
+      define_tasks(argument_names:)
 
       rake_task = Rake::Task['generate']
 
